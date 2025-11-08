@@ -1,0 +1,30 @@
+# whenever we raise a pr just run this ci pipeline
+name: build on pr
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+    branches: 
+      - '*'
+jobs:
+  
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: checkout the code
+        uses: actions/checkout@v4
+
+
+      - name: setup bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: install dependencies
+        run: bun install
+
+      - name: build the project
+        run: bun run build
+
+      
+        
