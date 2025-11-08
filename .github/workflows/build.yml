@@ -24,7 +24,7 @@ jobs:
         run: bun install
 
       - name: build the project
-        run: bun run build
+        run: bun run typecheck
 
       
         

@@ -3,7 +3,7 @@
   "module": "index.ts",
   "type": "module",
   "private": true,
-  "build": "bun run compile",
+  "typecheck": "bun run --bun tsc --noEmit",
   "devDependencies": {
     "@types/bun": "latest"
   },
