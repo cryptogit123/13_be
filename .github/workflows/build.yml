@@ -14,7 +14,6 @@ jobs:
       - name: checkout the code
         uses: actions/checkout@v4
 
-
       - name: setup bun
         uses: oven-sh/setup-bun@v1
         with:
@@ -23,8 +22,9 @@ jobs:
       - name: install dependencies
         run: bun install
 
-      - name: build the project
-        run: bun run typecheck
+      - name: run lint checks
+        run: bun run lint
+        continue-on-error: false
 
       
         
