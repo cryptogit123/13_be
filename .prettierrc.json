@@ -1,0 +1,25 @@
+{
+  "arrowParens": "always",
+  "bracketSameLine": false,
+  "bracketSpacing": true,
+  "editorconfig": true,
+  "embeddedLanguageFormatting": "auto",
+  "enable": ["eslint", "prettier"],
+  "endOfLine": "auto",
+  "jsxSingleQuote": true,
+  "jsxBracketSameLine": false,
+  "organizeImportsSkipDestructiveCodeActions": true,
+  "plugins": ["prettier-plugin-organize-imports"],
+  "pluginSearchDirs": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "resolveGlobalModules": true,
+  "semi": true,
+  "singleAttributePerLine": false,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "all",
+  "useTabs": false
+}
+

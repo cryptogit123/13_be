@@ -3,8 +3,31 @@
   "module": "index.ts",
   "type": "module",
   "private": true,
+  "scripts": {
+    "lint": "cross-env ESLINT_USE_FLAT_CONFIG=true eslint . --max-warnings 0 --cache --cache-location ./node_modules/.cache/eslint/",
+    "lint:debug": "cross-env ESLINT_USE_FLAT_CONFIG=true eslint . --debug --no-cache",
+    "lint:fix": "cross-env ESLINT_USE_FLAT_CONFIG=true eslint . --fix",
+    "lint-staged": "lint-staged",
+    "format": "prettier --write \"**/*.ts\""
+  },
+  "lint-staged": {
+    "**/*.ts": [
+      "bun run lint:fix",
+      "bun run format"
+    ]
+  },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "cross-env": "^10.1.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-prettier": "^5.2.1",
+    "lint-staged": "^15.2.9",
+    "prettier": "^3.3.3",
+    "prettier-plugin-organize-imports": "^4.0.0"
   },
   "peerDependencies": {
     "typescript": "^5"
