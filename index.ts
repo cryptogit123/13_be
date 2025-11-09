@@ -12,7 +12,7 @@ const promisedSetTimeout = (delay: number) => {
   });
 };
 
-promisedSetTimeout(1000).then(() => console.log('promise resolved'));
+void promisedSetTimeout(1000).then(() => console.log('promise resolved'));
 
 app.listen(3000, () => {
   console.log('Server is running on port 3000');
